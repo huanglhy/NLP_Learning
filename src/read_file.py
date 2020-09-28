@@ -93,7 +93,7 @@ class readFromExcel():
 
 
 if __name__ == '__main__':
-    a = readFromExcel(filepath=r'D:\pycharm_project\knowledge_rule\datas\question_base.xlsx')
+    a = readFromExcel(filepath=r'D:\pycharm_project\knowledge_learning\datas\wenshu.xlsx')
     a.load_excel()
-    print(a.DataStrut)
+    print(len(a.DataStrut))
     print(a.answerDict)

@@ -9,6 +9,7 @@
     2.添加停用词，将一些不必要的，但是影响距离的词去掉，例如：“问下”'''
 import json
 import jieba
+from gensim import models
 
 from calculate_distance import paragraph_vector, distCos
 from process import get_stopwords

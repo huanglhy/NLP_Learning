@@ -20,9 +20,9 @@ def word_vec(path):
     sentences = word2vec.PathLineSentences(path)
     model = word2vec.Word2Vec(sentences, size=200, window=5, min_count=5, workers=multiprocessing.cpu_count())
     # 保存模型
-    model.save("../model/law/corpus00.model")
+    model.save("../model/20200928/corpus00.model")
     # 保存词向量
-    model.wv.save_word2vec_format("../model/law/corpus00.vector", binary=False)
+    model.wv.save_word2vec_format("../model/20200928/corpus00.vector", binary=False)
 
 
 if __name__ == "__main__":

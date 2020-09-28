@@ -37,7 +37,7 @@ def law_vec(input_path, question_path, answer_path):
     stopwords = get_stopwords()
     question_dict = defaultdict(list)
     # model = FastText.load_fasttext_format("../../../yuanyh/cc.zh.300.bin")
-    model = models.Word2Vec.load("../model/law/corpus00.model")
+    model = models.Word2Vec.load("../model/20200928/corpus00.model")
     f = open('../datas/law/unlogin_0810.txt', 'w', encoding="utf-8")  # 设置文件对象
     for key, value in a.DataStrut.items():
         question_contents = []
@@ -45,7 +45,7 @@ def law_vec(input_path, question_path, answer_path):
         for word in words:
             if word not in stopwords:
                 question_contents.append(word)
-        paragraph_vec = law_paragraph(question_contents, model, f)
+        paragraph_vec = law_paragraph(question_contents, model)
         question_dict[value].append(paragraph_vec.tolist())
     question_split = {}
     for key, value in question_dict.items():
@@ -57,6 +57,6 @@ def law_vec(input_path, question_path, answer_path):
 
 if __name__ == '__main__':
     input_path = "../datas/questionBase.xls"
-    question_path = "../datas/law/question_vec_01.json"
-    answer_path = "../datas/law/answer_dict_01.json"
+    question_path = "../datas/law/question_vec_20200928.json"
+    answer_path = "../datas/law/answer_dict_20200928.json"
     law_vec(input_path, question_path, answer_path)

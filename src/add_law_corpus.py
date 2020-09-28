@@ -37,9 +37,9 @@ def parse_zhwiki(read_file_path, save_file_path):
 
 
 if __name__ == '__main__':
-    # input_path = "../datas/questionBase.xls"
-    # output_path = '../datas/law/corpus/law_corpus.txt'
+    # input_path = "../datas/wenshu.xlsx"
+    # output_path = '../datas/law/corpus/wenshu_corpus.txt'
     # prepare_corpus(input_path, output_path)
-    read_file_path = '../datas/law/corpus/law_corpus.txt'
-    save_file_path = '../datas/wiki/AA/law_corpus'
+    read_file_path = '../datas/law/corpus/wenshu.txt'
+    save_file_path = '../datas/w2v_corpus/wenshu_corpus'
     parse_zhwiki(read_file_path, save_file_path)

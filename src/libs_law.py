@@ -19,7 +19,7 @@ def test_text_vec(text):
     print('text预处理')
     # model = models.Word2Vec.load("../model/wiki_corpus00.model")
     # model = FastText.load_fasttext_format("../../../yuanyh/cc.zh.300.bin")
-    model = models.Word2Vec.load("../model/law/corpus00.model")
+    model = models.Word2Vec.load("../model/20200928/corpus00.model")
     stopwords = get_stopwords()
     question_contents = []
     words = jieba.cut(text, cut_all=False)
